@@ -1,0 +1,330 @@
+:root {
+  --primary-blue: #1976d2; /* MUI primary */
+  --primary-blue-light: #e3f2fd;
+  --primary-blue-dark: #1565c0;
+  --text-dark: rgba(0,0,0,0.87);
+  --text-light: rgba(0,0,0,0.6);
+  --border-color: rgba(0,0,0,0.12);
+  --bg-light: #fafafa;
+  --white: #fff;
+  --accent-amber: #ffc107; /* retro amber */
+  --accent-green: #3ddc84; /* optional retro green */
+  --pixel-border: rgba(0,0,0,0.28);
+  --custom-bg-color: rgb(233,196,160); /* 自定义背景色 */
+  --custom-text-color: rgb(188,107,71); /* 自定义字体颜色（输入框以外） */
+  --custom-input-border-color: rgb(188,107,71); /* 输入框描边线颜色 */
+  --custom-input-text-color: #000000; /* 输入框字体颜色 */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  margin: 0;
+  padding: 16px;
+  background-color: var(--custom-bg-color); /* 应用自定义背景色 */
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+}
+
+.header { margin: 20px 0 14px; text-align: center; }
+.brand {
+  font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: var(--custom-text-color);
+  background: var(--custom-bg-color);
+  border: 2px solid var(--custom-text-color);
+  border-radius: 0;
+  display: inline-block;
+  padding: 8px 12px;
+  box-shadow:
+    0 0 0 2px var(--custom-text-color) inset,
+    4px 4px 0 0 var(--custom-text-color);
+}
+.sub {
+  font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px; /* 与 .section-title 字体大小一致 */
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  margin-top: 6px;
+}
+
+textarea,
+input[type="text"]:not(.extra-category),
+input[type="password"],
+select {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--custom-input-border-color); /* 应用自定义描边线颜色 */
+  border-radius: 6px;
+  background-color: var(--custom-bg-color); /* 应用自定义背景色 */
+  color: var(--text-light); /* 与默认文本灰色一致 */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--custom-input-border-color); /* 应用自定义描边线颜色 */
+  box-shadow: 0 0 0 3px rgba(188, 107, 71, 0.2); /* 调整焦点时的阴影颜色 */
+}
+
+.row {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-top: 12px;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  font-size: 0.9em;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  width: auto;
+}
+
+/* Pixel-style primary button */
+button#save {
+  padding: 4px 8px; /* 与小按钮一致 */
+  font-size: 12px; /* 与小按钮一致 */
+  background: var(--custom-bg-color);
+  color: var(--custom-text-color);
+  border: 1px solid var(--custom-text-color);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+button#save:hover {
+  background: var(--custom-bg-color); /* 取消交互效果 */
+  color: var(--custom-text-color);
+}
+
+button#save:active {
+  transform: none; /* 取消交互效果 */
+  box-shadow: none;
+}
+
+button#toggle {
+  background-color: var(--custom-bg-color); /* 应用自定义背景色 */
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  border-color: var(--custom-text-color); /* 应用自定义描边线颜色 */
+}
+
+button#toggle:hover {
+  background-color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  color: var(--custom-bg-color); /* 与背景色反色 */
+}
+
+.tip {
+  font-size: 12px;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  margin-top: 12px;
+}
+
+.status {
+  font-size: 12px;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  margin-top: 8px;
+  min-height: 16px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  font-size: 0.9em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+details {
+  margin-top: 12px;
+  font-size: 14px;
+  border: 1px solid var(--custom-input-border-color); /* 应用自定义描边线颜色 */
+  border-radius: 6px;
+  background-color: var(--custom-bg-color); /* 应用自定义背景色 */
+}
+
+details[open] {
+  padding-bottom: 12px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 8px 12px;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  list-style: revert; /* Use default triangle */
+}
+
+.actions { display: flex; align-items: center; gap: 10px; margin-top: 12px; justify-content: space-between; }
+.actions .muted-link {
+  font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+/* 统一所有标题的复古字体样式 */
+.section-title,
+label.section-title {
+  font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--custom-text-color);
+  letter-spacing: 0.5px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.last-output-section { text-align: center; }
+.last-output {
+  margin-top: 8px;
+  min-height: 80px;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.more-info { border: 0; background: transparent; }
+
+.more-info__header { display: none; }
+
+.extras-footer { text-align: right; padding: 4px 0 0; }
+.extras-footer .link-button {
+  background: transparent;
+  border: none;
+  font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--custom-text-color); /* 应用自定义字体颜色 */
+  letter-spacing: 0.5px;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+.extras-footer .link-button:hover { text-decoration: underline; }
+
+.more-info__header button {
+  width: auto;
+  padding: 6px 10px;
+}
+
+.extras { padding: 4px 0 0; display: flex; flex-direction: column; gap: 12px; }
+
+.extra-row { display: flex; flex-direction: column; gap: 8px; padding: 0; border: none; border-radius: 0; background: transparent; }
+
+.extra-row .top-line {
+  display: flex; /* 使用 flex 布局 */
+  justify-content: space-between; /* 两端对齐 */
+  align-items: center;
+  gap: 8px;
+}
+
+/* 移除下划线样式，应用标准输入框样式 */
+.extra-category {
+  width: 30%; /* 设置宽度为 30% */
+  border: 1px solid var(--custom-input-border-color); /* 应用自定义描边线颜色 */
+  border-radius: 6px; /* 应用标准圆角 */
+  background-color: var(--custom-bg-color); /* 应用自定义背景色 */
+  color: var(--text-light); /* 与默认文本灰色一致 */
+}
+.extra-category:focus {
+  outline: none;
+  border-color: var(--custom-input-border-color); /* 应用自定义描边线颜色 */
+  box-shadow: 0 0 0 3px rgba(188, 107, 71, 0.2); /* 调整焦点时的阴影颜色 */
+}
+
+/* 移除 pixel-border 效果 */
+.extra-row .bottom-line textarea {
+  width: 100%;
+  min-height: 96px;
+  border: 1px solid var(--custom-input-border-color); /* 应用标准边框 */
+  border-radius: 6px; /* 应用标准圆角 */
+  padding: 8px 12px;
+  background-color: var(--custom-bg-color); /* 应用自定义背景色 */
+  box-shadow: none; /* 移除 box-shadow */
+  color: var(--text-light); /* 与默认文本灰色一致 */
+}
+.extra-row .bottom-line textarea:focus {
+  outline: none;
+  border-color: var(--custom-input-border-color); /* 应用自定义描边线颜色 */
+  box-shadow: 0 0 0 3px rgba(188, 107, 71, 0.2); /* 应用标准 focus 效果 */
+}
+
+.extra-row .remove { width: 28px; height: 28px; padding: 0; background: transparent; border: 1px solid var(--custom-text-color); /* 应用自定义描边线颜色 */ border-radius: 0; color: var(--custom-text-color); /* 应用自定义字体颜色 */ display: inline-flex; align-items: center; justify-content: center; }
+.extra-row .remove:hover { background: var(--custom-input-border-color); /* 应用自定义描边线颜色 */}
+
+.error { color: #d9534f; font-size: 12px; padding: 4px 0 0; }
+
+.row > #copyLast,
+.row > #refreshLast,
+.row > #clearLast {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: var(--custom-bg-color);
+  color: var(--custom-text-color);
+  border: 1px solid var(--custom-text-color);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Remove interactive hover and active effects for small buttons */
+.row > #copyLast:hover,
+.row > #refreshLast:hover,
+.row > #clearLast:hover {
+  background: var(--custom-bg-color);
+  color: var(--custom-text-color);
+}
+.row > #copyLast:active,
+.row > #refreshLast:active,
+.row > #clearLast:active {
+  transform: none;
+  box-shadow: none;
+}
+
+button#test {
+  padding: 4px 8px; /* 与 Save 一致 */
+  font-size: 12px; /* 与 Save 一致 */
+  background: var(--custom-bg-color);
+  color: var(--custom-text-color);
+  border: 1px solid var(--custom-text-color);
+  border-radius: 0;
+  box-shadow: none;
+}
+button#test:hover {
+  background: var(--custom-bg-color);
+  color: var(--custom-text-color);
+}
+button#test:active {
+  transform: none;
+  box-shadow: none;
+}

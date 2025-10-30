@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": " Autofill Assistant",
+  "version": "0.1.0",
+  "description": "Generate and fill text on any page using your unique context.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Using the Autofill tool",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "ICON-1761832231757/unicornicon16.png",
+    "32": "ICON-1761832231757/unicornicon32.png",
+    "48": "ICON-1761832231757/unicornicon48.png",
+    "128": "ICON-1761832231757/unicornicon128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "toggle_select_mode": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      },
+      "description": "Toggle select mode"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css": ["content-style.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

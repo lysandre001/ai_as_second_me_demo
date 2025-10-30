@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI as second me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      width: 350px;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">AI as second me</div>
+    <div class="sub">Personal file for AI</div>
+  </div>
+
+  <div class="section card">
+    <div class="section-title">Your context</div>
+    <div id="extrasContainer" class="extras"></div>
+    <div class="extras-footer">
+      <button id="addExtra" class="link-button" type="button">+ More</button>
+    </div>
+    <div id="extrasError" class="error"></div>
+  </div>
+
+  <div class="section card">
+    <label for="style-preference" class="section-title">Output style</label>
+    <input type="text" id="style-preference" placeholder="e.g. Short, first-person, bullet points, 120–180 words" value="Professional, concise, focused">
+  </div>
+
+  <div class="actions">
+    <button id="save">Save</button>
+    <a id="openOptions" class="muted-link" href="#">Settings</a>
+  </div>
+  <div class="status" id="status"></div>
+
+  <div class="section card last-output-section">
+    <div class="section-title">Last output</div>
+    <div id="lastOutput" class="last-output" aria-live="polite"></div>
+    <div class="row" style="justify-content:center;">
+      <button id="copyLast">Copy</button>
+      <button id="refreshLast">Refresh</button>
+      <button id="clearLast">Clear</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
