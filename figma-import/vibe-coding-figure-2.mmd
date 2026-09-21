@@ -1,0 +1,47 @@
+flowchart TB
+    shift["Paradigm Shift"]
+
+    subgraph tradCol ["Traditional Software Development — Deterministic Intent Mediation"]
+        direction TB
+        tHuman["Human"]
+        tIntent["Intent: sort list 3, 1, 2 smallest to largest"]
+        tGap["Deterministic Intent Mediation — Code"]
+        tGapCode["run program sort 3, 1, 2"]
+        tComputer["Computer"]
+        tProc["Deterministic Processing — Compiler"]
+        tProcIO["In: run program — Out: machine code"]
+        tExec["Execution — Processor"]
+        tExecIO["In: machine code — Out: 1, 2, 3"]
+        tHuman --> tIntent --> tGap --> tGapCode --> tComputer --> tProc --> tProcIO --> tExec --> tExecIO
+    end
+
+    subgraph vibeCol ["Vibe Coding — Probabilistic Intent Mediation"]
+        direction TB
+        vHuman["Human"]
+        vIntent["Intent: sort list 3, 1, 2 smallest to largest"]
+        vGap["Probabilistic Intent Mediation — Natural Language"]
+        vGapNL["Write a program that sorts the list 3, 1, 2"]
+        vComputer["Computer"]
+        vInterp["Probabilistic Interpretation — LLM"]
+        vInterpIO["In: NL prompt — Out: run program sort"]
+        vProc["Deterministic Processing — Compiler"]
+        vProcIO["In: run program — Out: machine code"]
+        vExec["Execution — Processor"]
+        vExecIO["In: machine code — Out: 1, 2, 3"]
+        vHuman --> vIntent --> vGap --> vGapNL --> vComputer --> vInterp --> vInterpIO --> vProc --> vProcIO --> vExec --> vExecIO
+    end
+
+    shift --> tradCol
+    shift --> vibeCol
+    tIntent -.->|"1 same human intent"| vIntent
+    tProc -.->|"5 shared deterministic stage"| vProc
+
+    style tradCol fill:#CDF4D3,stroke:#66D575
+    style vibeCol fill:#C2E5FF,stroke:#3DADFF
+    style tGap fill:#DCCCFF,stroke:#874FFF
+    style tProc fill:#DCCCFF,stroke:#874FFF
+    style vGap fill:#FFE0C2,stroke:#FF9E42
+    style vInterp fill:#FFE0C2,stroke:#FF9E42
+    style vProc fill:#DCCCFF,stroke:#874FFF
+    style tExec fill:#CDF4D3,stroke:#66D575
+    style vExec fill:#CDF4D3,stroke:#66D575
