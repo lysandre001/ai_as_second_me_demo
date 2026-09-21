@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1180" viewBox="0 0 1280 1180" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <pattern id="gapHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#e8b4b4" stroke-width="4"/>
+    </pattern>
+    <marker id="arrowDown" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+    </marker>
+    <marker id="arrowRight" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8b0000"/>
+    </marker>
+  </defs>
+
+  <!-- Paradigm shift arrow -->
+  <text x="520" y="42" font-size="18" font-weight="700" fill="#8b0000">Paradigm Shift</text>
+  <line x1="380" y1="52" x2="900" y2="52" stroke="#8b0000" stroke-width="3" marker-end="url(#arrowRight)"/>
+
+  <!-- Column titles -->
+  <text x="80" y="78" font-size="17" font-weight="700">Traditional Software Development</text>
+  <text x="80" y="98" font-size="13" font-style="italic" fill="#444">Deterministic Intent Mediation</text>
+  <text x="680" y="78" font-size="17" font-weight="700">Vibe Coding in Software Development</text>
+  <text x="680" y="98" font-size="13" font-style="italic" fill="#444">Probabilistic Intent Mediation</text>
+
+  <!-- Human layer backgrounds -->
+  <rect x="40" y="110" width="560" height="130" fill="#d4e8c4" rx="4"/>
+  <rect x="680" y="110" width="560" height="130" fill="#d4e8c4" rx="4"/>
+  <text x="55" y="132" font-size="14" font-weight="600">Human</text>
+  <text x="695" y="132" font-size="14" font-weight="600">Human</text>
+
+  <!-- Intent boxes -->
+  <rect x="120" y="145" width="400" height="78" fill="#fff" stroke="#ccc" rx="10"/>
+  <text x="135" y="168" font-size="14" font-weight="700">Intent</text>
+  <text x="135" y="188" font-size="12">"I want to sort the list [3, 1, 2] from smallest to largest."</text>
+
+  <rect x="760" y="145" width="400" height="78" fill="#fff" stroke="#ccc" rx="10"/>
+  <text x="775" y="168" font-size="14" font-weight="700">Intent</text>
+  <text x="775" y="188" font-size="12">"I want to sort the list [3, 1, 2] from smallest to largest."</text>
+
+  <!-- Callout 1 -->
+  <line x1="520" y1="184" x2="760" y2="184" stroke="#666" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <circle cx="640" cy="184" r="16" fill="#f5d76e" stroke="#c9a227"/>
+  <text x="636" y="189" font-size="14" font-weight="700">1</text>
+
+  <!-- Intent mediation gap -->
+  <rect x="40" y="250" width="560" height="150" fill="url(#gapHatch)" stroke="#e0a0a0" rx="4"/>
+  <rect x="680" y="250" width="560" height="150" fill="url(#gapHatch)" stroke="#e0a0a0" rx="4"/>
+  <text x="55" y="272" font-size="14" font-weight="600">Intent Mediation Gap</text>
+  <text x="695" y="272" font-size="14" font-weight="600">Intent Mediation Gap</text>
+
+  <rect x="130" y="290" width="380" height="95" fill="#fff" stroke="#874fff" stroke-width="2.5" rx="12"/>
+  <text x="200" y="315" font-size="14" font-weight="700" fill="#874fff">Deterministic Intent Mediation</text>
+  <text x="280" y="335" font-size="12" font-style="italic">Code</text>
+  <text x="175" y="360" font-size="13" font-family="Consolas, monospace">run program { sort [3, 1, 2] }</text>
+  <circle cx="108" cy="337" r="16" fill="#f5d76e" stroke="#c9a227"/>
+  <text x="104" y="342" font-size="14" font-weight="700">2</text>
+
+  <rect x="770" y="290" width="380" height="95" fill="#fff" stroke="#eb7500" stroke-width="2.5" rx="12"/>
+  <text x="830" y="315" font-size="14" font-weight="700" fill="#eb7500">Probabilistic Intent Mediation</text>
+  <text x="900" y="335" font-size="12" font-style="italic">Natural Language</text>
+  <text x="790" y="360" font-size="12">"Write a program that sorts the list [3, 1, 2]."</text>
+  <circle cx="1168" cy="337" r="16" fill="#f5d76e" stroke="#c9a227"/>
+  <text x="1164" y="342" font-size="14" font-weight="700">3</text>
+
+  <!-- Arrows human to gap -->
+  <line x1="320" y1="223" x2="320" y2="288" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <line x1="960" y1="223" x2="960" y2="288" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- Computer layer -->
+  <rect x="40" y="410" width="560" height="480" fill="#c5d9ef" rx="4"/>
+  <rect x="680" y="410" width="560" height="480" fill="#c5d9ef" rx="4"/>
+  <text x="55" y="432" font-size="14" font-weight="600">Computer</text>
+  <text x="695" y="432" font-size="14" font-weight="600">Computer</text>
+
+  <!-- Traditional: Deterministic Processing -->
+  <rect x="100" y="450" width="440" height="130" fill="#fff" stroke="#874fff" stroke-width="2.5" rx="12"/>
+  <text x="230" y="478" font-size="14" font-weight="700" fill="#874fff">Deterministic Processing</text>
+  <text x="280" y="498" font-size="12" font-style="italic">Compiler</text>
+  <text x="120" y="525" font-size="12" font-family="Consolas, monospace">In: run program { sort [3,1,2] }</text>
+  <text x="120" y="548" font-size="12" font-family="Consolas, monospace">Out: 0101 0011 0111 0001</text>
+
+  <!-- Traditional: Execution -->
+  <rect x="100" y="600" width="440" height="130" fill="#fff" stroke="#3e9b4b" stroke-width="2.5" rx="12"/>
+  <text x="280" y="628" font-size="14" font-weight="700" fill="#3e9b4b">Execution</text>
+  <text x="280" y="648" font-size="12" font-style="italic">Processor</text>
+  <text x="120" y="675" font-size="12" font-family="Consolas, monospace">In: 0101 0011 0111 0001</text>
+  <text x="120" y="698" font-size="12" font-family="Consolas, monospace">Out: [1, 2, 3]</text>
+
+  <line x1="320" y1="385" x2="320" y2="448" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <line x1="320" y1="580" x2="320" y2="598" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- Vibe: Probabilistic Interpretation -->
+  <rect x="740" y="450" width="440" height="130" fill="#fff" stroke="#eb7500" stroke-width="2.5" rx="12"/>
+  <text x="870" y="478" font-size="14" font-weight="700" fill="#eb7500">Probabilistic Interpretation</text>
+  <text x="900" y="498" font-size="12" font-style="italic">Large Language Model</text>
+  <text x="760" y="525" font-size="11" font-family="Consolas, monospace">In: "Write a program that sorts the list [3, 1, 2]."</text>
+  <text x="760" y="548" font-size="12" font-family="Consolas, monospace">Out: run program { sort [3,1,2] }</text>
+  <circle cx="1198" cy="515" r="16" fill="#f5d76e" stroke="#c9a227"/>
+  <text x="1194" y="520" font-size="14" font-weight="700">4</text>
+
+  <!-- Vibe: Deterministic Processing -->
+  <rect x="740" y="600" width="440" height="130" fill="#fff" stroke="#874fff" stroke-width="2.5" rx="12"/>
+  <text x="870" y="628" font-size="14" font-weight="700" fill="#874fff">Deterministic Processing</text>
+  <text x="920" y="648" font-size="12" font-style="italic">Compiler</text>
+  <text x="760" y="675" font-size="12" font-family="Consolas, monospace">In: run program { sort [3,1,2] }</text>
+  <text x="760" y="698" font-size="12" font-family="Consolas, monospace">Out: 0101 0011 0111 0001</text>
+
+  <!-- Vibe: Execution -->
+  <rect x="740" y="750" width="440" height="130" fill="#fff" stroke="#3e9b4b" stroke-width="2.5" rx="12"/>
+  <text x="920" y="778" font-size="14" font-weight="700" fill="#3e9b4b">Execution</text>
+  <text x="920" y="798" font-size="12" font-style="italic">Processor</text>
+  <text x="760" y="825" font-size="12" font-family="Consolas, monospace">In: 0101 0011 0111 0001</text>
+  <text x="760" y="848" font-size="12" font-family="Consolas, monospace">Out: [1, 2, 3]</text>
+
+  <line x1="960" y1="385" x2="960" y2="448" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <line x1="960" y1="580" x2="960" y2="598" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <line x1="960" y1="730" x2="960" y2="748" stroke="#333" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- Callout 5 -->
+  <line x1="540" y1="665" x2="740" y2="665" stroke="#666" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <circle cx="640" cy="665" r="16" fill="#f5d76e" stroke="#c9a227"/>
+  <text x="636" y="670" font-size="14" font-weight="700">5</text>
+
+  <text x="40" y="940" font-size="15" font-weight="700">FIGURE 2. Paradigm shift from deterministic to probabilistic intent mediation in software development.</text>
+</svg>

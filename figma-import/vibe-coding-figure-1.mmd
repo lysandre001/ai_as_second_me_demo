@@ -1,0 +1,48 @@
+flowchart LR
+    subgraph descCol ["Description"]
+        direction TB
+        d1["User states goal in natural language"]
+        d2["AI concretizes goal, asks feedback"]
+        d3["User refines goal"]
+        d4["AI implements and presents artifact"]
+        d5["User engages creatively with artifact"]
+        d6["AI refines artifact per user intent"]
+        d1 --> d2 --> d3 --> d4 --> d5 --> d6
+    end
+
+    subgraph convCol ["Vibe Coding Conversation User-AI"]
+        direction TB
+        u1["User: coffee rating app idea"]
+        a1["AI: feature breakdown and database"]
+        u2["User: notes and roaster fields"]
+        a2["AI: simple initial layout"]
+        u3["User: coffee-themed nicer design"]
+        a3["AI: warm browns and creams theme"]
+        u1 --> a1 --> u2 --> a2 --> u3 --> a3
+    end
+
+    subgraph artCol ["Vibe Coded Artifact"]
+        direction TB
+        art1["Wireframe: My Coffee Ratings"]
+        art2["Themed UI: coffee colors"]
+        art1 --> art2
+    end
+
+    d1 -.-> u1
+    d2 -.-> a1
+    d3 -.-> u2
+    d4 -.-> a2
+    d5 -.-> u3
+    d6 -.-> a3
+    a2 --> art1
+    a3 --> art2
+
+    style descCol fill:#D9D9D9,stroke:#B3B3B3
+    style convCol fill:#C2E5FF,stroke:#3DADFF
+    style artCol fill:#FFECBD,stroke:#FFC943
+    style u1 fill:#CDF4D3,stroke:#66D575
+    style u2 fill:#CDF4D3,stroke:#66D575
+    style u3 fill:#CDF4D3,stroke:#66D575
+    style a1 fill:#C2E5FF,stroke:#3DADFF
+    style a2 fill:#C2E5FF,stroke:#3DADFF
+    style a3 fill:#C2E5FF,stroke:#3DADFF
